@@ -4,24 +4,26 @@ import {
   StyleSheet,
   TouchableOpacity,
   Animated,
+  useColorScheme
 } from "react-native";
-
 import { useRef } from "react";
 import { useTheme, useNavigationState } from "@react-navigation/native";
 import { Ionicons, FontAwesome } from "@expo/vector-icons";
 import { Link } from "expo-router";
+import { Colors } from '@/constants/Colors';
 
 export default function BottomNavBar() {
+  const theme = useColorScheme() ?? 'light';
   const currentRouteName = useNavigationState(
     (state) => state.routes[state.index]?.name
   );
-  const { colors } = useTheme();
 
   // Separate animation refs for each button
   const homeScaleAnim = useRef(new Animated.Value(1)).current;
   const analyticsScaleAnim = useRef(new Animated.Value(1)).current;
   const subscriptionsScaleAnim = useRef(new Animated.Value(1)).current;
   const settingsScaleAnim = useRef(new Animated.Value(1)).current;
+
 
   // Function to animate button press
   const animateScale = (scaleAnim: Animated.Value) => {
@@ -50,7 +52,7 @@ export default function BottomNavBar() {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={{...styles.container, backgroundColor: theme === 'light' ?  Colors.light.forebackground : Colors.dark.forebackground}}>
       <View style={styles.tabContainer}>
         {/* Home Icon */}
         <Link href="/" asChild>
@@ -131,7 +133,7 @@ export default function BottomNavBar() {
 const styles = StyleSheet.create({
   container: {
     position: "absolute",
-    bottom: 0,
+    bottom: 10,
     left: 0,
     right: 0,
     height: 90,

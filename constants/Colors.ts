@@ -6,6 +6,7 @@ export const Colors = {
     primary: '#1d60d7',          // Main brand color used for accents and buttons
     secondary: '#78abec',        // Secondary brand color for some UI elements
     background: '#f1f6ff',       // Main background color
+    forebackground: '#020f22',
     foreground: '#4e5155',       // Slightly darker background for cards and components
     text: '#0c0c10',             // Main text color for readability
     textGray: '#687076',         // Subtle gray text for less important info
@@ -20,6 +21,7 @@ export const Colors = {
     primary: '#1b6ce8',
     secondary: '#0D47A1',
     background: '#020f22',       // Dark background color
+    forebackground: '#f1f6ff',
     foreground: '#605f5f',       // Slightly lighter dark background for cards
     text: '#f6f6f7',             // Light text color for readability
     textGray: '#9BA1A6',         // Subtle gray text for less important info
