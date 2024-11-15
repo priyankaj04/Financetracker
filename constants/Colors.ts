@@ -21,9 +21,10 @@ export const Colors = {
   dark: {
     primary: '#1b6ce8',
     secondary: '#0D47A1',
-    background: '#020f22',       // Dark background color
+    background: '#111827',
+    forebackground1: '#030712',      // Dark background color
     forebackground: '#f1f6ff',
-    foreground: '#605f5f',       // Slightly lighter dark background for cards
+    foreground: '#1f2937',       // Slightly lighter dark background for cards
     text: '#f6f6f7',             // Light text color for readability
     textGray: '#9BA1A6',         // Subtle gray text for less important info
     green: '#266c51',            // Positive indicators
