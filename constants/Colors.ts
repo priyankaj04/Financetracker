@@ -11,6 +11,7 @@ export const Colors = {
     text: '#0c0c10',             // Main text color for readability
     textGray: '#687076',         // Subtle gray text for less important info
     green: '#266c51',            // Positive indicators, like growth percentages
+    lightgreen:'#4ade80',
     error: '#f2312f',            // Error or negative indicators
     tint: tintColorLight,        // Tint color for highlighted icons and text
     icon: '#687076',             // Default icon color
@@ -26,6 +27,7 @@ export const Colors = {
     text: '#f6f6f7',             // Light text color for readability
     textGray: '#9BA1A6',         // Subtle gray text for less important info
     green: '#266c51',            // Positive indicators
+    lightgreen:'#4ade80',
     error: '#f2312f',            // Error color with a bit more brightness for dark mode
     tint: tintColorDark,         // Tint color for highlighted icons and text
     icon: '#bfbfbf',             // Default icon color for dark mode
