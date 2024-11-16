@@ -52,7 +52,7 @@ export default function BottomNavBar() {
   };
 
   return (
-    <View style={{...styles.container, backgroundColor: theme === 'light' ?  Colors.light.forebackground : Colors.dark.forebackground}}>
+    <View style={{...styles.container, backgroundColor: theme === 'light' ?  Colors.light.forebackground : Colors.dark.forebackground1}}>
       <View style={styles.tabContainer}>
         {/* Home Icon */}
         <Link href="/" asChild>
@@ -136,16 +136,16 @@ const styles = StyleSheet.create({
     bottom: 10,
     left: 0,
     right: 0,
-    height: 90,
+    height: 70,
     backgroundColor: "#ffffff",
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 50,
-    shadowColor: "#000",
+    shadowColor: "#1b6ce8",
     shadowOffset: { width: 0, height: -2 },
-    shadowOpacity: 0.1,
+    shadowOpacity: 0.05,
     shadowRadius: 10,
-    elevation: 10,
+    elevation: 2,
   },
   tabContainer: {
     flexDirection: "row",

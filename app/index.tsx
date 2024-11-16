@@ -56,7 +56,6 @@ const Home = () => {
         style={{
           flex: 1,
           backgroundColor: Colors.dark.forebackground1,
-          gap: 15,
         }}
       >
         {/* Header */}
@@ -127,6 +126,8 @@ const Home = () => {
               backgroundColor: Colors.dark.background,
               padding: 10,
               marginBottom: 15,
+              marginTop: 15,
+              gap: 15,
             }}
           >
             <View
@@ -282,11 +283,99 @@ const Home = () => {
                 )}
               </View>
             </View>
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                padding: 15,
+                borderRadius: 15,
+                marginVertical: 8,
+                borderWidth: 1,
+                borderColor: Colors.dark.foreground,
+              }}
+            >
+              {/* Icon */}
+              <View
+                style={{
+                  width: 40,
+                  height: 40,
+                  borderRadius: "50%",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginRight: 10,
+                  borderWidth: 1,
+                  borderColor: Colors.dark.foreground,
+                }}
+              >
+                <Entypo
+                  name="bar-graph"
+                  size={20}
+                  color={Colors.dark.primary}
+                />
+                {/* <Image
+                  source={{ uri: "https://path/to/your/icon.png" }} // Replace with actual icon URI or local image
+                  style={{ width: 24, height: 24, resizeMode: "contain" }}
+                /> */}
+              </View>
+
+              {/* Transaction Details */}
+              <View
+                style={{
+                  flex: 4,
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                  gap: 4,
+                }}
+              >
+                <Text
+                  style={{
+                    fontFamily: "SFProText-Medium",
+                    color: Colors.dark.textGray, // Subtle text color for date
+                  }}
+                >
+                  Let's check your{" "}
+                  <Text
+                    style={{
+                      fontFamily: "SFProText-Semibold",
+                      color: Colors.dark.text,
+                      marginBottom: -2,
+                      textOverflow: "overflow",
+                    }}
+                  >
+                    Financial Insight
+                  </Text>{" "}
+                  for the month of June.
+                </Text>
+              </View>
+
+              {/* Amount and Category */}
+              <View style={{ alignItems: "flex-end", flex: 1 }}>
+                <TouchableOpacity
+                  style={{
+                    borderWidth: 1,
+                    borderColor: Colors.dark.foreground,
+                    padding: 5,
+                    borderRadius: 20,
+                  }}
+                >
+                  <Entypo
+                    name="chevron-right"
+                    size={20}
+                    color={Colors.dark.primary}
+                  />
+                </TouchableOpacity>
+              </View>
+            </View>
           </View>
 
           {/* Recent Transactions */}
           <View
-            style={{ backgroundColor: Colors.dark.background, padding: 10, flex: 1, paddingBottom: 100 }}
+            style={{
+              backgroundColor: Colors.dark.background,
+              padding: 10,
+              flex: 1,
+              paddingBottom: 100,
+            }}
           >
             <View
               style={{
@@ -381,7 +470,7 @@ const Home = () => {
                     marginBottom: -2,
                   }}
                 >
-                  - $150.00
+                  - ₹150.00
                 </Text>
                 <Text
                   style={{
@@ -454,7 +543,7 @@ const Home = () => {
                     marginBottom: -2,
                   }}
                 >
-                  + $6,550.00
+                  + ₹6,550.00
                 </Text>
                 <Text
                   style={{
@@ -482,7 +571,7 @@ const Home = () => {
                 style={{
                   width: 40,
                   height: 40,
-                  borderRadius: '50%',
+                  borderRadius: "50%",
                   alignItems: "center",
                   justifyContent: "center",
                   marginRight: 10,
@@ -503,7 +592,7 @@ const Home = () => {
                   style={{
                     fontFamily: "SFProText-Semibold",
                     color: Colors.dark.text,
-                    marginBottom: -2
+                    marginBottom: -2,
                   }}
                 >
                   Netflix Subscriptions
@@ -511,7 +600,7 @@ const Home = () => {
                 <Text
                   style={{
                     fontFamily: "SFProText-Medium",
-                    color: Colors.dark.textGray, // Subtle text color for date                    
+                    color: Colors.dark.textGray, // Subtle text color for date
                   }}
                 >
                   June 20, 2024 at 1:50 PM
@@ -523,16 +612,16 @@ const Home = () => {
                 <Text
                   style={{
                     fontFamily: "SFProText-Bold",
-                    color: Colors.dark.error, 
-                    marginBottom: -2
+                    color: Colors.dark.error,
+                    marginBottom: -2,
                   }}
                 >
-                  - $150.00
+                  - ₹150.00
                 </Text>
                 <Text
                   style={{
                     fontFamily: "SFProText-Regular",
-                    color: Colors.dark.textGray
+                    color: Colors.dark.textGray,
                   }}
                 >
                   Entertainment
@@ -555,7 +644,7 @@ const Home = () => {
                 style={{
                   width: 40,
                   height: 40,
-                  borderRadius: '50%',
+                  borderRadius: "50%",
                   alignItems: "center",
                   justifyContent: "center",
                   marginRight: 10,
@@ -576,7 +665,7 @@ const Home = () => {
                   style={{
                     fontFamily: "SFProText-Semibold",
                     color: Colors.dark.text,
-                    marginBottom: -2
+                    marginBottom: -2,
                   }}
                 >
                   Netflix Subscriptions
@@ -584,7 +673,7 @@ const Home = () => {
                 <Text
                   style={{
                     fontFamily: "SFProText-Medium",
-                    color: Colors.dark.textGray, // Subtle text color for date                    
+                    color: Colors.dark.textGray, // Subtle text color for date
                   }}
                 >
                   June 20, 2024 at 1:50 PM
@@ -596,16 +685,16 @@ const Home = () => {
                 <Text
                   style={{
                     fontFamily: "SFProText-Bold",
-                    color: Colors.dark.error, 
-                    marginBottom: -2
+                    color: Colors.dark.error,
+                    marginBottom: -2,
                   }}
                 >
-                  - $150.00
+                  - ₹150.00
                 </Text>
                 <Text
                   style={{
                     fontFamily: "SFProText-Regular",
-                    color: Colors.dark.textGray
+                    color: Colors.dark.textGray,
                   }}
                 >
                   Entertainment
