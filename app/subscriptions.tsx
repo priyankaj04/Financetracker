@@ -10,19 +10,26 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTheme } from "@react-navigation/native";
 import dayjs from "dayjs";
-import {
-  Fontisto,
-  Entypo,
-  FontAwesome,
-  MaterialCommunityIcons,
-  Feather,
-} from "@expo/vector-icons";
+import { Fontisto, MaterialCommunityIcons, Feather, Ionicons } from "@expo/vector-icons";
 import { Colors } from "@/constants/Colors";
 import DateTimePicker, { DateType, ModeType } from "react-native-ui-datepicker";
 
 function Subscriptions() {
   const { colors } = useTheme();
-  const [dates, setDates] = useState<DateType[] | undefined>(["2024-11-03T18:30:00.000Z", "2024-11-05T18:30:00.000Z", "2024-11-06T18:30:00.000Z", "2024-11-18T18:30:00.000Z", "2024-11-19T18:30:00.000Z", "2024-11-20T18:30:00.000Z", "2024-11-21T18:30:00.000Z", "2024-11-23T18:30:00.000Z", "2024-11-24T18:30:00.000Z", "2024-11-25T18:30:00.000Z", "2024-11-26T18:30:00.000Z", "2024-11-27T18:30:00.000Z"]);
+  const [dates, setDates] = useState<DateType[] | undefined>([
+    "2024-11-03T18:30:00.000Z",
+    "2024-11-05T18:30:00.000Z",
+    "2024-11-06T18:30:00.000Z",
+    "2024-11-18T18:30:00.000Z",
+    "2024-11-19T18:30:00.000Z",
+    "2024-11-20T18:30:00.000Z",
+    "2024-11-21T18:30:00.000Z",
+    "2024-11-23T18:30:00.000Z",
+    "2024-11-24T18:30:00.000Z",
+    "2024-11-25T18:30:00.000Z",
+    "2024-11-26T18:30:00.000Z",
+    "2024-11-27T18:30:00.000Z",
+  ]);
 
   const onChange = useCallback(
     (params) => {
@@ -45,6 +52,8 @@ function Subscriptions() {
         );
       case "mobile":
         return <Feather name="smartphone" size={size} color={color} />;
+      case "chat":
+        return <Ionicons name="chatbubble" size={size} color={color} />;
       default:
         return <Feather name="help-circle" size={size} color={color} />; // Fallback icon
     }
@@ -85,6 +94,13 @@ function Subscriptions() {
       color: "#38bdf8",
       amount: 235,
       icon: "mobile",
+    },
+    {
+      name: "Chat GPT",
+      time: "Montly",
+      color: "white",
+      amount: 495,
+      icon: "chat",
     },
   ];
 
@@ -218,7 +234,11 @@ function Subscriptions() {
                   textAlign: "right",
                 }}
               >
-                ₹{(Data.reduce((sum, item) => sum + item.amount, 0)).toLocaleString('en-IN')}
+                ₹
+                {Data.reduce(
+                  (sum, item) => sum + item.amount,
+                  0
+                ).toLocaleString("en-IN")}
               </Text>
             </View>
             {/* Add transaction items here */}
@@ -286,7 +306,7 @@ function Subscriptions() {
                         marginBottom: -2,
                       }}
                     >
-                      - ₹{(item.amount).toLocaleString('en-IN')}
+                      - ₹{item.amount.toLocaleString("en-IN")}
                     </Text>
                   </View>
                 </View>

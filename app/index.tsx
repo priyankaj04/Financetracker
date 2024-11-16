@@ -9,6 +9,7 @@ import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import Entypo from "@expo/vector-icons/Entypo";
 import { Colors } from "@/constants/Colors";
 import { FontAwesome } from "@expo/vector-icons";
+import { Link } from "expo-router";
 
 const Home = () => {
   const navigation = useNavigation();
@@ -350,20 +351,22 @@ const Home = () => {
 
               {/* Amount and Category */}
               <View style={{ alignItems: "flex-end", flex: 1 }}>
-                <TouchableOpacity
-                  style={{
-                    borderWidth: 1,
-                    borderColor: Colors.dark.foreground,
-                    padding: 5,
-                    borderRadius: 20,
-                  }}
-                >
-                  <Entypo
-                    name="chevron-right"
-                    size={20}
-                    color={Colors.dark.primary}
-                  />
-                </TouchableOpacity>
+                <Link href="/analytics" asChild>
+                  <TouchableOpacity
+                    style={{
+                      borderWidth: 1,
+                      borderColor: Colors.dark.foreground,
+                      padding: 5,
+                      borderRadius: 20,
+                    }}
+                  >
+                    <Entypo
+                      name="chevron-right"
+                      size={20}
+                      color={Colors.dark.primary}
+                    />
+                  </TouchableOpacity>
+                </Link>
               </View>
             </View>
           </View>
