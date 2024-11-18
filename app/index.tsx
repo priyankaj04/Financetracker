@@ -10,6 +10,7 @@ import Entypo from "@expo/vector-icons/Entypo";
 import { Colors } from "@/constants/Colors";
 import { FontAwesome } from "@expo/vector-icons";
 import { Link } from "expo-router";
+import Header from "@/components/Header";
 
 const Home = () => {
   const navigation = useNavigation();
@@ -60,64 +61,12 @@ const Home = () => {
         }}
       >
         {/* Header */}
-        <View
-          style={{
-            height: 70,
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "center",
-            paddingHorizontal: 10,
-            backgroundColor: Colors.dark.background,
-          }}
-        >
-          {/* Profile Section */}
-          <View style={{ flexDirection: "row", alignItems: "center", gap: 15 }}>
-            <View
-              style={{
-                width: 50,
-                height: 50,
-                borderRadius: 25,
-                backgroundColor: Colors.light.primary,
-              }}
-            />
-            <View>
-              <Text
-                style={{
-                  fontFamily: "SFProText-Medium",
-                  color: Colors.dark.textGray,
-                  fontSize: 12,
-                  marginBottom: -2,
-                }}
-              >
-                Welcome Back 👋
-              </Text>
-              <Text
-                style={{
-                  fontFamily: "SFProText-Bold",
-                  color: Colors.dark.text,
-                  fontSize: 14,
-                }}
-              >
-                Priyanka J
-              </Text>
-            </View>
-          </View>
-
-          {/* Notifications Icon */}
-          <TouchableOpacity
-            style={{
-              width: 40,
-              height: 40,
-              borderRadius: 20,
-              borderWidth: 1,
-              borderColor: Colors.dark.foreground,
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Fontisto name="bell" size={18} color={Colors.dark.text} />
-          </TouchableOpacity>
-        </View>
+        <Header
+          showProfile={true}
+          profileName="Priyanka J"
+          showNotification={true}
+          onNotificationPress={() => console.log("Notification Pressed")}
+        />
 
         {/* Main Content */}
         <ScrollView>

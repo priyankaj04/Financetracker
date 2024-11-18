@@ -6,6 +6,8 @@ import { Colors } from "@/constants/Colors";
 import { BarChart } from "react-native-gifted-charts";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import Header from "@/components/Header";
+
 
 function analytics() {
   const [selectedMonth, setSelectedMonth] = useState("January");
@@ -43,26 +45,7 @@ function analytics() {
     <SafeAreaView style={{ flex: 1, backgroundColor: Colors.dark.background }}>
       <View style={{ flex: 1, backgroundColor: Colors.dark.forebackground1 }}>
         {/* Header Section */}
-        <View
-          style={{
-            height: 70,
-            flexDirection: "row",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            paddingHorizontal: 10,
-            backgroundColor: Colors.dark.background,
-          }}
-        >
-          <Text
-            style={{
-              fontFamily: "SFProText-Bold",
-              color: Colors.dark.text,
-              fontSize: 16,
-            }}
-          >
-            Statistics
-          </Text>
-        </View>
+        <Header title="Statistics" />
 
         <ScrollView>
           {/* Spent Overview */}
@@ -378,10 +361,10 @@ function analytics() {
                     }}
                   >
                     <FontAwesome
-                    name="money"
-                    size={18}
-                    color={'#4ade80'}
-                  />
+                      name="money"
+                      size={18}
+                      color={'#4ade80'}
+                    />
                     {/* <Fontisto name="plus-a" size={18} color={Colors.dark.text} /> */}
                   </TouchableOpacity>
                   <Text
@@ -429,10 +412,10 @@ function analytics() {
                     }}
                   >
                     <FontAwesome
-                    name="money"
-                    size={18}
-                    color={Colors.dark.error}
-                  />
+                      name="money"
+                      size={18}
+                      color={Colors.dark.error}
+                    />
                     {/* <Fontisto name="plus-a" size={18} color={Colors.dark.text} /> */}
                   </TouchableOpacity>
                   <Text
@@ -480,10 +463,10 @@ function analytics() {
                     }}
                   >
                     <MaterialCommunityIcons
-                    name="piggy-bank"
-                    size={18}
-                    color={'#f472b6'}
-                  />
+                      name="piggy-bank"
+                      size={18}
+                      color={'#f472b6'}
+                    />
                     {/* <Fontisto name="plus-a" size={18} color={Colors.dark.text} /> */}
                   </TouchableOpacity>
                   <Text

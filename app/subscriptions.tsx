@@ -10,9 +10,15 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTheme } from "@react-navigation/native";
 import dayjs from "dayjs";
-import { Fontisto, MaterialCommunityIcons, Feather, Ionicons } from "@expo/vector-icons";
+import {
+  Fontisto,
+  MaterialCommunityIcons,
+  Feather,
+  Ionicons,
+} from "@expo/vector-icons";
 import { Colors } from "@/constants/Colors";
 import DateTimePicker, { DateType, ModeType } from "react-native-ui-datepicker";
+import Header from "@/components/Header";
 
 function Subscriptions() {
   const { colors } = useTheme();
@@ -112,42 +118,11 @@ function Subscriptions() {
           backgroundColor: Colors.dark.forebackground1,
         }}
       >
-        <View
-          style={{
-            height: 70,
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "center",
-            paddingHorizontal: 10,
-            backgroundColor: Colors.dark.background,
-          }}
-        >
-          {/* Profile Section */}
-          <View style={{ flexDirection: "row", alignItems: "center", gap: 15 }}>
-            <Text
-              style={{
-                fontFamily: "SFProText-Bold",
-                color: Colors.dark.text,
-                fontSize: 16,
-              }}
-            >
-              Payments
-            </Text>
-          </View>
-          <TouchableOpacity
-            style={{
-              width: 40,
-              height: 40,
-              borderRadius: 20,
-              borderWidth: 1,
-              borderColor: Colors.dark.foreground,
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Fontisto name="plus-a" size={18} color={Colors.dark.text} />
-          </TouchableOpacity>
-        </View>
+        <Header
+          title="Payments"
+          showAddButton={true}
+          onAddButtonPress={() => console.log("Add Button Pressed")}
+        />
         <ScrollView>
           <View
             style={{
